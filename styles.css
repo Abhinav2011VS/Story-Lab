@@ -107,16 +107,27 @@ body {
     margin: 20px auto;
     max-width: 300px;
     border: 2px solid #58a6ff;
-    animation: glow-card 1s infinite alternate;
+    animation: glow-card 10s infinite alternate;
 }
 
 @keyframes glow-card {
     0% {
-        box-shadow: 0 0 10px #58a6ff, 0 0 20px #58a6ff;
+        box-shadow: 0 0 10px red, 0 0 20px red;
     }
-    100% {
-        box-shadow: 0 0 20px #ff7b72, 0 0 30px #ff7b72;
+    33% {
+        box-shadow: 0 0 20px green, 0 0 30px green;
     }
+    66% {
+        box-shadow: 0 0 30px blue, 0 0 40px blue;
+    }
+    99% {
+        box-shadow: 0 0 40px red, 0 0 50px red;
+    }
+}
+
+.bhismavijaya, .story-lab {
+    color: #c9d1d9;
+    text-decoration: none;
 }
 
 .story-card h4 {
@@ -133,32 +144,6 @@ body {
 
 .story-card a:hover {
     color: #58a6ff;
-}
-
-/* Matrix-style Flowing Text */
-.matrix-text {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow: hidden;
-}
-
-.matrix-column {
-    font-size: 16px;
-    color: #00ff00;
-    animation: matrix-fall 3s linear infinite;
-}
-
-@keyframes matrix-fall {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(100%);
-    }
 }
 
 /* Footer */
